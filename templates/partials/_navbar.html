@@ -10,13 +10,25 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="navbar-nav">
+          {% if request.path == '/' %}
           <li class="nav-item active mr-3">
+            {% else %}
+            <li class="nav-item mr-3">
+          {% endif %}
             <a class="nav-link" href="{% url 'index' %}">Home</a>
           </li>
-          <li class="nav-item mr-3">
+          {% if request.path == '/about' %}
+          <li class="nav-item active mr-3">
+            {% else %}
+            <li class="nav-item mr-3">
+          {% endif %}
             <a class="nav-link" href="{% url 'about' %}">About</a>
           </li>
-          <li class="nav-item mr-3">
+          {% if request.path == '/listings' %}
+          <li class="nav-item active mr-3">
+            {% else %}
+            <li class="nav-item mr-3">
+          {% endif %}
             <a class="nav-link" href="{% url 'listings' %}">Featured Listings</a>
           </li>
         </ul>
