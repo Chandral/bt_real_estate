@@ -42,8 +42,11 @@ def login(request):
     return render(request, 'accounts/login.html')
 
 
-def logout():
-    return redirect('index')
+def logout(request):
+    if request.method == 'POST':
+        auth.logout(request)
+        messages.success(request, "Logged out")
+        return redirect('index')
 
 
 def dashboard(request):
