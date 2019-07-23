@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.core.mail import send_mail
 from .models import Contact
 
-# Create your views here.
+
 def contact(request):
     if request.method == "POST":
         listing_id = request.POST['listing_id']
@@ -21,6 +21,7 @@ def contact(request):
             if has_contacted:
                 messages.error(request, "Inquiry exists")
                 return redirect('/listings/' + listing_id)
+
         contact = Contact(listing=listing, listing_id=listing_id, name=name, email=email, phone=phone, message=message,
                           user_id=user_id)
         contact.save()
@@ -28,8 +29,8 @@ def contact(request):
         send_mail(
             "Inquiry received",
             "We have received your inquiry",
-            'aksh.shah89@gmail.com',
-            ["chandral.thakor@gmail.com"],
+            'chandral.photos@gmail.com',
+            [realtor_email, "chandral.thakor@gmail.com"],
             fail_silently=False
         )
         return redirect('/listings/'+listing_id)
