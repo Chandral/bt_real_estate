@@ -28,7 +28,7 @@ CONFIG_DATA = yaml.load(open("config.yaml"), Loader=yaml.FullLoader)
 SECRET_KEY = CONFIG_DATA["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -86,11 +86,8 @@ WSGI_APPLICATION = 'btre.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': CONFIG_DATA["NAME"],
-        'USER': CONFIG_DATA["USER"],
-        'PASSWORD': CONFIG_DATA["PASSWORD"],
-        'HOST': CONFIG_DATA["HOST"]
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
