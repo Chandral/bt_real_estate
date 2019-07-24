@@ -8,7 +8,6 @@
 *.pyc
 __pycache__/
 local_settings.py
-db.sqlite3
 media
 
 # If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
@@ -138,7 +137,7 @@ dmypy.json
 # User adds
 venv
 .idea
-db.sqlite3
+# db.sqlite3
 /media
 /static
 config.yaml
