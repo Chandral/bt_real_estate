@@ -28,7 +28,7 @@ CONFIG_DATA = yaml.load(open("config.yaml"), Loader=yaml.FullLoader)
 SECRET_KEY = CONFIG_DATA["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 

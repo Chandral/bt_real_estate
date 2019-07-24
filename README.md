@@ -21,7 +21,7 @@ A platform to sell real estate properties (powered by Django).
  - Python 3.7.3
  - Django Framework 2.2.3
  - PostgreSQL 11
- - Boostrap
+ - Bootstrap
  - A detailed list of requirements can also be found at [requirements.txt](https://github.com/Chandral/bt_real_estate/blob/master/requirements.txt)
 
 ## Installation
