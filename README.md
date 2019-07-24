@@ -1,5 +1,5 @@
 # bt_real_estate
-A platform to sell real estate properties (powered by Django).
+A platform to sell real estate properties (powered by Django). Live demo available at http://chandral.pythonanywhere.com/.
 
 ## Features included
  - Display real estate properties for sale with pictures and detailed information about the property.
