@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Realtor
 
 
+# Enables Realtor data to be managed from the site admin
 class RealtorAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'email', 'hire_date', 'is_mvp')
     list_editable = ('is_mvp',)

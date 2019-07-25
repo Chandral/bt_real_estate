@@ -2,6 +2,7 @@ from django.db import models
 from datetime import datetime
 
 
+# Creates model for contact inquiries in the database
 class Contact(models.Model):
     listing = models.CharField(max_length=200)
     listing_id = models.IntegerField()

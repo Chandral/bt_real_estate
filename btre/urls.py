@@ -18,6 +18,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+# Registering lists of view methods from all the apps
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('pages.urls')),
