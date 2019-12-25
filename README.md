@@ -33,4 +33,4 @@ A platform to sell real estate properties (powered by Django). Live demo availab
  - Once everything is setup correctly, run ```python manage.py runserver``` command from the same folder. Your app should be running locally on the default localhost port 8000.
 
 ## Support
- - For any questions please, send an email to chandral.thakor@gmail.com
+ - For any questions please, send an email to nightcode10@gmail.com
